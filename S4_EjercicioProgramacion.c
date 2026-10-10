@@ -1,6 +1,6 @@
 /*
-Integrantes:
-Fecha de entrega:
+Integrantes: Camila Torres, David Narvaez, Jean Zambrano, Erick Guamani
+Fecha de entrega: 11 - 10 - 2026
 Descripción:
 Programa en C para gestionar un inventario de hasta 10 productos, almacenando sus nombres y precios 
 en arreglos. Permite ingresar los datos, calcular el precio total y promedio del inventario, 
@@ -35,8 +35,16 @@ int main (int argc, char *argv[]) {
         
          //Nombre de los productos
         case 1:
-            printf("¿Cuantos productos desea ingresar? (máximo 10): \n");
-            scanf(" %d", &n);
+
+            do{
+                printf("¿Cuantos productos desea ingresar? (máximo 10): \n");
+                scanf(" %d", &n);
+
+                if (n > 10){
+                    printf("La cantidad de productos ingresada no es válida\n");
+                }
+
+            } while (n > 10);
 
             for (i=0; i<n; i++){
                 printf("Ingrese el nombre del producto %d: \n", i+1);
