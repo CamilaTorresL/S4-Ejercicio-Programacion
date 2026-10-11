@@ -16,7 +16,7 @@ int main (int argc, char *argv[]) {
 
     char nombreProductos[10][20], buscar[20], nombreCaro[20], nombreBarato[20];
     float precios[10], total = 0, caro = 0, prom = 0, barato;
-    int opcion, i, n, respuesta, productosIngresados = 0, encontrar=0;
+    int opcion, i, n, respuesta, productosIngresados = 0;
 
     do{
         system("cls"); //Para que la interfaz se vea más limpia al ejecutar en el cmd
@@ -134,6 +134,8 @@ int main (int argc, char *argv[]) {
 
             printf("Ingrese el nombre del producto para conocer su precio: \n");
             scanf(" %s", buscar);
+
+            int encontrar = 0;
 
             for (i=0; i<n; i++){
 
